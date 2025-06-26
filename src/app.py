@@ -17,7 +17,7 @@ client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
 )
 
-reader = easyocr.Reader(['en'])
+reader = easyocr.Reader(['en'], gpu=False)
 
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in app.config['ALLOWED_EXTENSIONS']
@@ -104,4 +104,5 @@ def chat_with_ai(user_message):
     return chat_completion.choices[0].message.content
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=5000)
+    
