@@ -1,12 +1,12 @@
 # Legalizer - LLM Based Legal Document Summarizer and Doubt Solver
 
-Legalizer is an innovative application designed to assist users in summarizing legal documents and answering legal queries using advanced language models. The application provides a user-friendly interface for interacting with the AI, allowing users to upload documents and engage in meaningful conversations regarding legal matters.
+Legalizer is a web application that helps users summarize legal documents and get answers to legal queries using advanced language models. Users can upload PDF or image files, and interact with an AI assistant through a user-friendly chat interface. The backend is built with Flask and leverages the Groq LLM model for summarization and question answering.
 
 ## Features
 
-- **Document Summarization**: Users can upload PDF or image files, which are processed to extract text and summarized using the Groq LLM model.
-- **Legal Query Assistance**: Users can chat with the AI to get answers to their legal questions, making it a valuable tool for both legal professionals and individuals seeking legal information.
-- **User-Friendly Interface**: The application is designed with a clean and colorful UI to enhance user experience.
+- **Document Summarization**: Upload PDF or image files to extract and summarize legal content using the Groq LLM model.
+- **Legal Query Assistance**: Chat with the AI to receive answers to legal questions.
+- **User-Friendly Interface**: Clean, modern UI for easy interaction.
 
 ## Project Structure
 
@@ -21,43 +21,54 @@ legalizer
 │   │   ├── index.html        # Landing page template
 │   │   └── chat.html         # Chat interface template
 ├── requirements.txt          # Python dependencies
+├── Dockerfile                # Docker build instructions
+├── docker-compose.yml        # Docker Compose configuration
 └── README.md                 # Project documentation
 ```
 
 ## Installation
 
-To set up the project, follow these steps:
-
-1. Clone the repository:
+1. **Clone the repository:**
    ```
    git clone <repository-url>
    cd legalizer
    ```
 
-2. Install the required dependencies:
+2. **Install dependencies:**
    ```
    pip install -r requirements.txt
    ```
 
-3. Set up your environment variables, including the `GROQ_API_KEY`.
+3. **Set up environment variables:**
+   - Create a `.env` file and add your `GROQ_API_KEY`.
+
+4. **(Optional) Run with Docker:**
+   ```
+   docker-compose up --build
+   ```
 
 ## Usage
 
-1. Start the Flask application:
-   ```
-   python src/app.py
-   ```
+- **Start the Flask application:**
+  ```
+  python src/app.py
+  ```
+  Or use Docker as above.
 
-2. Open your web browser and navigate to `http://127.0.0.1:5000` to access the landing page.
+- **Access the app:**
+  Open your browser and go to [http://127.0.0.1:5000](http://127.0.0.1:5000).
 
-3. Click on the "Chat Now" button to enter the chat interface, where you can upload documents and interact with the AI.
+- **Interact:**
+  - Use the landing page to navigate to the chat interface.
+  - Upload documents or type legal questions to get AI-powered responses.
 
 ## Contributors
 
-- [Your Name](https://github.com/yourprofile) - Project Lead
-- [Contributor Name](https://github.com/contributorprofile) - Developer
-- [Contributor Name](https://github.com/contributorprofile) - Designer
+- [Satwik M badiger](https://github.com/Satwikmbadiger)
+- [Mohit R](https://github.com/moh-maverick)
+- [M Rahul Sagayaraj](https://github.com/rahulsags)
+- [Mahesh Sharma](https://github.com/mahesh2095)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache License 2.0 - see the [LICENSE](LICENSE) file for details.
