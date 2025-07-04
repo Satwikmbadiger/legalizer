@@ -22,7 +22,6 @@ RUN pip install --upgrade pip && \
 
 # Copy project files
 COPY src/ ./src
-COPY .env .env
 
 # Expose port
 EXPOSE 5000

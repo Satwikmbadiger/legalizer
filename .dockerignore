@@ -1,0 +1,37 @@
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.venv
+
+# Environment variables
+.env
+
+# Uploads or local user data
+uploads/
+
+# Git files
+.git
+.gitignore
+
+# OS and IDE files
+.DS_Store
+.vscode/
+*.swp
+*.bak
+
+# Docker files you don't need in image
+docker-compose.yml
+.dockerignore
+
+# Testing
+tests/
+coverage.*
+htmlcov/
+.pytest_cache/  
+
+# readme files
+README.md
