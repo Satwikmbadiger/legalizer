@@ -9,3 +9,4 @@ services:
       - ./uploads:/app/uploads
     env_file:
       - .env
+    restart: unless-stopped
